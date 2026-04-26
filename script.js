@@ -60,7 +60,7 @@ if(contactForm) {
             await fetch(scriptURL, { method: 'POST', body: formData });
 
             // JANGAN LUPA GANTI DENGAN NOMOR WA ASLI KAMU 👇
-            const nomorWA = "6281234567890"; 
+            const nomorWA = "6285714865867"; 
             const teksWA = `Halo Admin DAWIW,%0A%0AAda pesan baru dari website:%0ANama: ${name}%0AEmail: ${email}%0APesan: ${message}`;
             const urlWA = `https://wa.me/${nomorWA}?text=${teksWA}`;
 
