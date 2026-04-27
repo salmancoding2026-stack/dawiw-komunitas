@@ -16,7 +16,7 @@
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">Tentang</a></li>
                 <li><a href="#gallery">Galeri</a></li>
-                <li><a href="#contact">Kontak</a></li>
+                <li><a href="#contact">Daftar</a></li>
                 <li><button id="darkModeToggle" class="dark-mode-btn">🌙</button></li>
             </ul>
             <div class="burger">
@@ -30,19 +30,19 @@
     <section id="home" class="hero">
         <div class="hero-content">
             <h1>Selamat Datang di <span>DAWIW</span></h1>
-            <p>Tempat berkumpul, berbagi inspirasi, dan tumbuh bersama komunitas.</p>
+            <p>Wadah kolaborasi untuk tumbuh dan berkembang bersama.</p>
             <a href="#about" class="btn">Pelajari Lebih Lanjut</a>
         </div>
     </section>
 
     <section id="about" class="about hidden-element">
         <h2>Tentang Kami</h2>
-        <p>DAWIW adalah wadah bagi individu yang ingin memperluas jaringan dan meningkatkan skill melalui kolaborasi positif. Kami percaya bahwa tumbuh bersama jauh lebih kuat daripada berjalan sendiri.</p>
+        <p>DAWIW adalah komunitas yang fokus pada pengembangan potensi diri melalui kolaborasi positif dan berbagi pengetahuan di berbagai bidang keahlian.</p>
     </section>
 
     <section id="gallery" class="gallery hidden-element">
         <h2>Galeri Kegiatan</h2>
-        <p>Momen-momen seru bersama komunitas DAWIW.</p>
+        <p>Dokumentasi momen berharga komunitas kami.</p>
         <div class="gallery-grid">
             <img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&w=800&q=80" alt="Kegiatan 1">
             <img src="https://images.unsplash.com/photo-1528605248644-14dd04022da1?auto=format&fit=crop&w=800&q=80" alt="Kegiatan 2">
@@ -51,13 +51,22 @@
     </section>
 
     <section id="contact" class="contact hidden-element">
-        <h2>Hubungi Kami</h2>
-        <p>Punya pertanyaan atau ingin berkolaborasi? Kirimkan pesan kepada kami.</p>
+        <h2>Pendaftaran Anggota</h2>
+        <p>Lengkapi formulir di bawah untuk bergabung dan memetakan minatmu.</p>
         <form id="contactForm" class="contact-form">
             <input type="text" id="name" placeholder="Nama Lengkap" required>
             <input type="email" id="email" placeholder="Alamat Email" required>
-            <textarea id="message" rows="5" placeholder="Tulis pesanmu di sini..." required></textarea>
-            <button type="submit" class="btn-submit">Kirim Pesan</button>
+            
+            <select id="minat" required>
+                <option value="" disabled selected>Pilih Bidang Minat Utama</option>
+                <option value="Teknologi & Web Dev">Teknologi & Web Dev</option>
+                <option value="Desain Kreatif">Desain Kreatif</option>
+                <option value="Manajemen & Bisnis">Manajemen & Bisnis</option>
+                <option value="Sosial & Pendidikan">Sosial & Pendidikan</option>
+            </select>
+
+            <textarea id="message" rows="4" placeholder="Ceritakan singkat tentang dirimu..." required></textarea>
+            <button type="submit" class="btn-submit">Kirim Pendaftaran</button>
         </form>
     </section>
 
@@ -69,6 +78,6 @@
         <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
     </a>
 
-    <script src="script.js"></script>
+    <script type="module" src="script.js"></script>
 </body>
 </html>

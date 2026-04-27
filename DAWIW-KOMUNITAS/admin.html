@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - DAWIW</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="admin-body">
+
+    <div id="loginScreen" class="admin-login">
+        <div class="login-box">
+            <h2>Portal Admin DAWIW</h2>
+            <p>Gunakan akun Google kamu untuk mengakses data komunitas dengan aman.</p>
+            
+            <button id="googleLoginBtn" class="btn" style="background-color: #4285F4; border: none; width: 100%; display: flex; justify-content: center; align-items: center; gap: 10px; margin-top: 20px;">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google" style="width: 20px; background: white; border-radius: 50%; padding: 2px;">
+                Masuk dengan Google
+            </button>
+            
+            <p id="loginError" style="color: red; display: none; margin-top: 15px;">Gagal login. Silakan coba lagi.</p>
+        </div>
+    </div>
+
+    <div id="dashboardScreen" class="dashboard-container" style="display: none;">
+        <header class="dashboard-header">
+            <h2>DAWIW <span>Dashboard</span></h2>
+            <div style="display: flex; align-items: center; gap: 15px;">
+                <span id="adminEmail" style="font-size: 0.9rem; opacity: 0.8;"></span>
+                <button id="logoutBtn" class="btn-alt" style="padding: 5px 15px; font-size: 14px;">Keluar</button>
+            </div>
+        </header>
+
+        <div class="dashboard-content">
+            <div class="stats-cards">
+                <div class="card">
+                    <h3>Total Anggota</h3>
+                    <p id="totalMembers">0</p>
+                </div>
+            </div>
+
+            <div class="table-container">
+                <h3>Daftar Pendaftar Terbaru</h3>
+                <table class="admin-table">
+                    <thead>
+                        <tr>
+                            <th>Tanggal</th>
+                            <th>Nama</th>
+                            <th>Email</th>
+                            <th>Minat</th>
+                            <th>Pesan</th>
+                        </tr>
+                    </thead>
+                    <tbody id="memberTableBody">
+                        <tr><td colspan="5" style="text-align: center;">Memuat data...</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="admin.js"></script>
+</body>
+</html>
